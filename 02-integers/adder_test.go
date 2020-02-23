@@ -19,4 +19,3 @@ func ExampleAdd() {
 	fmt.Println(sum)
 	// Output: 6
 }
-g
