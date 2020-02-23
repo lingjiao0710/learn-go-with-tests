@@ -1,4 +1,6 @@
-package iteration
+package main
+
+import "fmt"
 
 const repeatCount = 5
 
@@ -11,5 +13,6 @@ func Repeat(character string) (repeated string) {
 }
 
 func main() {
-
+	out := Repeat("t")
+	fmt.Println(out)
 }

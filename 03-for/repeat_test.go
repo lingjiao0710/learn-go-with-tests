@@ -1,6 +1,9 @@
-package iteration
+package main
 
-import "testing"
+import (
+	"fmt"
+	"testing"
+)
 
 func BenchmarkRepeat(b *testing.B) {
 	for i := 0; i < b.N; i++ {
@@ -15,4 +18,11 @@ func TestRepeat(t *testing.T) {
 	if repeated != expexted {
 		t.Errorf("expected '%q' but not '%q'", expexted, repeated)
 	}
+}
+
+func ExampleRepeat() {
+	out := Repeat("t")
+	fmt.Println(out)
+	// Output:
+	// ttttt
 }
