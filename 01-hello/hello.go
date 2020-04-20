@@ -34,6 +34,54 @@ func greetingPrefix(language string) (prefix string) {
 	return
 }
 
+/*
+type student struct {
+	name string
+	age  int
+}
+
 func main() {
-	fmt.Println(Hello("world", ""))
+	m := make(map[string]*student)
+	stus := []student{
+		{name: "小王子", age: 18},
+		{name: "娜扎", age: 23},
+		{name: "大王八", age: 9000},
+	}
+
+	for _, stu := range stus {
+		m[stu.name] = &stu
+		fmt.Println(stu.name, &stu)
+	}
+	for k, v := range m {
+		fmt.Println(k, "=>", v.name, v)
+	}
+}
+*/
+// func main() {
+// 	fmt.Println(Hello("world", ""))
+// }
+
+func main() {
+	defer_call()
+
+}
+
+func defer_call() {
+
+	defer func() {
+		fmt.Println("打印前")
+	}()
+
+	defer func() {
+		if err := recover(); err != nil {
+			fmt.Println(err)
+		}
+		fmt.Println("打印中")
+	}()
+
+	defer func() {
+		fmt.Println("打印后")
+	}()
+
+	panic("触发异常")
 }
