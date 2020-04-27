@@ -9,7 +9,7 @@ import (
 func TestCheckWebsites(t *testing.T) {
 	websites := []string{
 		"http://baidu.com",
-		"http://163.com",
+		"http://www.163.com",
 		"waat://furhurterwe.geds",
 	}
 
